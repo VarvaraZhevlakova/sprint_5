@@ -49,23 +49,14 @@ class Locators:
     SVG_ELEMENT = (By.XPATH, "//*[name()='svg' and @width='290' and @height='50']")
 
     # Раздел "Соусы" в конструкторе
-    SAUCES_SECTION = (By.XPATH, "//span[text()='Соусы']")
-    SAUCES_ELEMENT = (By.XPATH, "//p[contains(text(), 'Соус фирменный Space Sauce')]")
-    SAUCES_PIC = (By.XPATH, "//img[@src='https://code.s3.yandex.net/react/code/sauce-04.png']")
+    SAUCES_SECTION = (By.XPATH, "//div[contains(@class, 'tab_tab__1SPyG') and contains(., 'Соусы')]")
 
     # Раздел "Начинки" в конструкторе
-    FILLINGS_SECTION = (By.XPATH, "//span[text()='Начинки']")
-    FILLINGS_ELEMENT = (By.XPATH, "//*[contains(text(), 'Филе Люминесцентного тетраодонтимформа')]")
-    FILLINGS_PIC = (By.XPATH, "//img[@src='https://code.s3.yandex.net/react/code/meat-03.png']")
+    FILLINGS_SECTION = (By.XPATH, "//div[contains(@class, 'tab_tab__1SPyG') and span[text()='Начинки']]")
 
+    # Раздел "Булки" в конструкторе
+    BUNS_SECTION = (By.XPATH, "//div[contains(@class, 'tab_tab__1SPyG') and span[text()='Булки']]")
 
-    # Флюоресцентная булочка
-    VIOLET_BUNS = (By.XPATH, "//img[@src='https://code.s3.yandex.net/react/code/bun-01.png']")
-    BUNS_ING = (By.XPATH, "//p[contains(text(), 'Флюоресцентная булка R2-D3')]")
-
-    # Открытие и закрытие окон
-    CLASS = (By.CLASS_NAME, "Modal_modal_opened__3ISw4")
-    CLOSE = (By.CLASS_NAME, "Modal_modal__close_modified__3V5XS")
 
 
 

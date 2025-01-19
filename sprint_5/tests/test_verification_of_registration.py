@@ -1,12 +1,13 @@
 from sprint_5.helpers.gen_email import generate_email
 from sprint_5.locators import Locators
 from sprint_5.test_data import TestData
+from sprint_5.urls import browser_register
 
 
 class TestRegistration:
 
-    def test_successful_registration(self, driver_browser_register):
-        driver = driver_browser_register
+    def test_successful_registration(self, driver):
+        driver.get(browser_register)
         email = generate_email()
         NAME = TestData.NAME
         PASSWORD = TestData.PASSWORD
@@ -19,9 +20,9 @@ class TestRegistration:
         login_button = driver.find_element(*Locators.LOGIN_BUTTON)
         assert login_button.is_displayed(), "Вход выполнен успешно."
 
-    def test_unsuccessful_registration(self, driver_browser_register):
+    def test_unsuccessful_registration(self, driver):
         email = generate_email()
-        driver = driver_browser_register
+        driver.get(browser_register)
         NAME = TestData.NAME
 
         driver.find_element(*Locators.NAME_INPUT).send_keys(NAME)

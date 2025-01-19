@@ -9,7 +9,7 @@ from sprint_5.urls import browser_login
 
 class TestLogout:
 
-    def test_logout_button(self, successful_registration_on_the_main_page):
+    def test_logout_button(self, driver, successful_registration_on_the_main_page):
         driver = successful_registration_on_the_main_page
 
         driver.find_element(*Locators.PERSONAL_ACCOUNT_BUTTON).click()
